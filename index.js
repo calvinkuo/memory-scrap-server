@@ -29,7 +29,7 @@ express()
       const client = await pool.connect()
       await client.query('create table test_table (id integer, name text)');
       await client.query('insert into test_table values (1, \'hello database\')');
-      res.render('pages/db', results );
+      res.render('pages/index');
       client.release();
     } catch (err) {
       console.error(err);
